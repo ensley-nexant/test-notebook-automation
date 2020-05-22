@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "Executing pre-commit."
+python -m pip install --quiet jupytext
+jupytext --from ipynb --to py:percent --pre-commit
+git reset HEAD **/*.ipynb
